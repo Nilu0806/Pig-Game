@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!--STYLES:-->
+	<style type="text/css">
+
+	</style>
+	<link rel="stylesheet" type="text/css" href="style2.css">
+
+	<!--FONT STYLE[font-family: 'Hanalei Fill', cursive;]-->
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Hanalei+Fill&display=swap" rel="stylesheet">
+    
+    <!--TITLE:-->
+	<title>-MY JAVASCRIPT DOM ACCESSING[BY IMPLEMENTING PIG GAME]-</title>
+</head>
+
+<body style="font-family: 'Hanalei Fill', cursive;">
+	<!--BACKGROUND IMAGE:-->
+	<img src="image1.jpeg" style="position: absolute; width: 100%; height: 100%; opacity: 0.5;">
+
+	<!--GAME NAME:-->
+	<span style="position: absolute; top: 5%; width: 100%; text-align: center; font-size: 50px;">&lt; PIG GAME &gt;</span>
+	
+	<!--PLAYER1:-->
+<div class="p1_panel active">
+	<span id="p1_total" style="position: absolute; top: 10%; left: 30%; width: 40%; height: 20%; background-color: rgba(255,255,255,0.5); border-radius: 5%; text-align: center; font-size: 25px; color: black; box-shadow: 0 0 0 2.5px white;">1</span>
+	<span id="p1_current" style="position: absolute; top: 50%; left: 30%; width: 40%; height: 20%; background-color: white; color: black; border-radius: 5%; text-align: center; font-size: 25px; box-shadow: 0 0 0 2.5px white;">1</span>
+	<span id="p1_name" style="position: absolute; top: 80%; width: 100%; text-align: center; color: white;">PLAYER1</span>
+</div>
+<section id="p1_ID" style="position: absolute; top: 51%; left: 20%; width: 25%; height: 5%; background-color: white; border-radius: 5%; text-align: center; font-size: 25px;">ID: 12345</section>
+	
+	<!--PLAYER2:-->
+<div class="p2_panel">
+	<span id="p2_total" style="position: absolute; top: 10%; left: 30%; width: 40%; height: 20%; background-color: rgba(255,255,255,0.5); border-radius: 5%; text-align: center; font-size: 25px; color: black; box-shadow: 0 0 0 2.5px white;">2</span>
+	<span id="p2_current" style="position: absolute; top: 50%; left: 30%; width: 40%; height: 20%; background-color: white; color: black; border-radius: 5%; text-align: center; font-size: 25px; box-shadow: 0 0 0 2.5px white;">2</span>
+	<span id="p2_name" style="position: absolute; top: 80%; width: 100%; text-align: center; color: white;">PLAYER2</span>
+</div>
+<section id="p2_ID" style="position: absolute; top: 51%; left: 55%; width: 25%; height: 5%; background-color: white; border-radius: 5%; text-align: center; font-size: 25px;">ID: 67890</section>
+
+<!--BUTTONS:-->
+<!--BUTTON TO NEW GAME:-->
+<button class="button_new" style="position: absolute; top: 65%; left: 25%; height: 7.5%; width: 10%; background-color: white; font-size: 25px; color: black; box-shadow: 0; font-family: 'Hanalei Fill', cursive;">NEW</button>
+<!--BUTTON TO ROLL DICE:-->
+<button class="button_roll" style="position: absolute; top: 65%; left: 45%; height: 7.5%; width: 10%; background-color: white; font-size: 25px; color: black; box-shadow: 0; font-family: 'Hanalei Fill', cursive;">ROLL</button>
+<!--BUTTON TO HOLD DICE:-->
+<button class="button_hold" style="position: absolute; top: 65%; left: 65%; height: 7.5%; width: 10%; background-color: white; font-size: 25px; color: black; box-shadow: 0; font-family: 'Hanalei Fill', cursive;">HOLD</button>
+
+<!--DICE:-->
+<p style="position: absolute; top: 30%; left: 45%; height: 10%; width: 10%; display: inline-flex;">
+	<img id="dice1" src="dice1.svg" class="dice">
+	<img id="dice2" src="dice2.svg" class="dice">
+	<img id="dice3" src="dice3.svg" class="dice">
+	<img id="dice4" src="dice4.svg" class="dice">
+	<img id="dice5" src="dice5.svg" class="dice">
+	<img id="dice6" src="dice6.svg" class="dice">
+</p>
+
+<!--SCORE INDICATOR:-->
+<!--PLAYER1 TOTAL SCORE:-->
+<div style="position: absolute; top: 28%; left: 5%;">TOTAL SCORE:</div>
+<!--PLAYER2 TOTAL SCORE:-->
+<div style="position: absolute; top: 28%; right: 5%;">:EROCS LATOT</div>
+<!--PLAYER1 CURRENT SCORE:-->
+<div style="position: absolute; top: 38%; left: 2.5%;">CURRENT SCORE:</div>
+<!--PLAYER2 CURRENT SCORE:-->
+<div style="position: absolute; top: 38%; right: 2.5%;">:EROCS TNERRUC</div>
+
+
+
+
+<form>
+<select style="position: absolute; top: 5%; left: 5%; width: 5%; height: 5%; background-color: red; color: white;" id="point">
+  <option value="50">50</option>
+  <option value="100">100</option>
+  <option value="200">200</option>
+  <option value="400">400</option>
+  <option value="600">600</option>
+</select>
+</form>
+<button class="button_gamepoint" style="position: absolute; top: 10%; left: 5%; width: 5%; height: 5%; background-color: red; color: white;">-></button>
+<b style="position: absolute; top: 6%; left: 11%; height: 5%; color: black;">&lt;-SET THE GAMEPOINT</b>
+
+
+
+
+
+<!--HOW TO ADD VIDEOS IN WEBPAGE-->
+<!--
+<video controls>
+  <source src="mov_bbb.mp4" type="video/mp4">
+  <source src="mov_bbb.ogg" type="video/ogg">
+  If your browser does not support HTML5 video!
+  Then screen display this.
+</video>
+
+<p>Video courtesy of <a href="https://www.owner_site.com" target="_blank"></a>Owner Name</p>
+-->
+
+
+
+
+
+<!--HOW TO CREATE OPTIONS IN WEBPAGE-->
+<!--
+<select>
+  <option value="name0">Thammi</option>
+  <option value="name1">Baba</option>
+  <option value="name2">Maa</option>
+  <option value="name3">Ami</option>
+  <option value="name4">Vai</option>
+</select>
+-->
+
+
+
+
+
+<!--HOW TO ENTER TEXT AND SUBMIT TO MAIL-->
+	<!--enctype="text/plain" => THIS IS FOR STOP ENCODING.-->
+<!--
+<form style="position: absolute; top: 70%;" type="text" enctype="text/plain" method=post action="mailto: niladridas0806@gmail.com">
+<textarea wrap="virtual" type="text"></textarea>
+<input style="display: block;" type="text" name="Name" value="first_name last_name">
+<button type="submit" name="submit" value="SUBMIT">SUBMIT</button>
+<button type="Reset" value="clear">CLEAR</button>
+</form>
+-->
+
+
+
+
+
+<!-- MAKING SHAPES -->
+<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+  <circle cx="50" cy="0" r="20"/>
+  <!-- <circle cx="x-axis(from left to center)" cy="y-axis(from top to center)" r="radius"/> -->
+</svg>
+
+
+
+
+
+<svg viewBox="0 0 200 100" xmlns="http://www.w3.org/2000/svg">
+  <!-- Example of a polygon with the default fill -->
+  <polygon points="0,100 50,25 50,75 100,0" />
+
+  <!-- Example of the same polygon shape with stroke and no fill -->
+  <polygon points="100,100 150,25 150,75 200,0"
+            fill="none" stroke="black" />
+</svg>
+
+
+
+
+
+</body>
+
+<!--SCRIPT:-->
+<script type="text/javascript">
+	
+</script>
+<script type="text/javascript" src="script2.js"></script>
+</html>
