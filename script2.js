@@ -46,20 +46,12 @@ document.querySelector('.p1_panel').classList.remove('active');
 document.querySelector('.p1_panel').classList.add('active');
 }
 
-
-
-
-
 //SET UP AN EVENT HANDLER FOR .button_gamepoint:
 document.querySelector('.button_gamepoint').addEventListener('click',function(){
 gamePoint=document.getElementById('point').value;
 alert("YOU SET YOUR GAMEPOINT ON: "+gamePoint);
 console.log(gamePoint);
 });
-
-
-
-
 
 //SET UP AN EVENT HANDLER FOR .button_roll:
 document.querySelector('.button_roll').addEventListener('click',function(){
@@ -117,12 +109,7 @@ else
     alert("NEW GAME STARTED:");
 	new_game();
 }
-
 });
-
-
-
-
 
 //SET UP AN EVENT HANDLER FOR .button_hold:
 document.querySelector('.button_hold').addEventListener('click',function(){
@@ -139,7 +126,6 @@ document.getElementById('p'+(activePlayer+1)+'_total').textContent=scores[active
 //CHECK IF ANY PLAYER WON THE GAME:
 if(scores[activePlayer]>=gamePoint)
 {
-
 //DISPLAY THE WINNER:
 if(!complete)
 {
@@ -165,7 +151,6 @@ else
 //WE GOT THE WINNER. SO, INITIALIZE THE complete VARIABLE WITH true VALUE:
 //IF, ANY ONE WON THE GAME. THEN, complete=false; => complete=true;
 complete=true;
-
 }
 
 else
@@ -178,19 +163,10 @@ currentScore=0;
 document.querySelector('.p1_panel').classList.toggle('active');
 document.querySelector('.p2_panel').classList.toggle('active');
 }
-
 });
-
-
-
-
 
 //SET UP AN EVENT HANDLER FOR .button_new:
 document.querySelector('.button_new').addEventListener('click',new_game);
-
-
-
-
 
 //LEARNING JAVASCRIPT DOM ACCESSING:
 
@@ -219,7 +195,6 @@ document.querySelector('#p'+(activePlayer+1)+'_current').innerHTML='<b>'+dice+'<
 //HOW TO READ FROM THE DOM:
 /*var read=document.querySelector('#p'+(activePlayer+1)+'_current').textContent;
 console.log(read);
-
 */
 
 //HOW TO CHANGE CSS STYLES:
@@ -227,7 +202,6 @@ console.log(read);
 //document.querySelector('#dice'+dice).style.display='all';
 //CSS - STYLES USING .class-SELECTOR:
 /*document.querySelector('#dice'+dice).className='dice_visibality';*/
-
 
 //ANOTHER WAY TO SELECT ELEMENTS BY ID:
 //.getElementById('ID') =>IT ONLY USE id-SELECTORS AND IT IS FASTER THAN querySelector.
@@ -255,11 +229,9 @@ document.querySelector('.button_roll').addEventListener('click',roll);//HERE, RO
 //WE CAN DO SIMILAR DIRECTLY:(using anonymous function: we use it when the event listener is unique. here, it is perfect.)
 /*document.querySelector('.button_roll').addEventListener('click',function(){
 //CODE;
-
 //1.RANDOM NUMBER:
 dice=Math.ceil(Math.random()*6);
 console.log(dice);
-
 //2.DISPLAY THE RESULT:
 //VISIBLE ONLY THE RECENT DICE:
 var SameAndPortable=document.querySelector('#dice'+dice);
@@ -269,7 +241,6 @@ for(var i=1;i<=(6-dice);i++)
 {
 document.querySelector('#dice'+(dice+i)).className='dice';
 }
-
 //3.UPDATE THE SCORE ONLY WHEN THE RANDOM NUMBER IS NOT A 1:
 if(dice!==1)
 {
@@ -277,18 +248,14 @@ if(dice!==1)
 currentScore+=dice;
 document.querySelector('#p'+(activePlayer+1)+'_current').textContent=currentScore;
 }
-
 //4.CHANGE THE PLAYER WHEN RANDOM NUMBER IS 1:
 else
 {
 currentScore=0;
 document.querySelector('#p'+(activePlayer+1)+'_current').textContent='0';
-
 //HOW TO ADD,REMOVE AND TOGGLE HTML CLASSES:
-
 //VERY USEFULL FEATURE TO REMOVE SOMETHING:
 document.querySelector('.p'+(activePlayer+1)+'_panel').classList.remove('active');
-
 //CHANGE PLAYER:
 /*
 if(activePlayer===0)
@@ -298,7 +265,6 @@ activePlayer=0;
 */
 /*//HERE, WE USE TERNARY OPERATOR:
 activePlayer===0?activePlayer=1:activePlayer=0;
-
 //VERY USEFULL FEATURE TO ADD SOMETHING:
 document.querySelector('.p'+(activePlayer+1)+'_panel').classList.add('active');
 */
